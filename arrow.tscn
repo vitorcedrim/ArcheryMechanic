@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3ilvygpys8nu"]
+
+[ext_resource type="Script" path="res://arrow.gd" id="1_jekui"]
+[ext_resource type="Texture2D" uid="uid://b26ehc1jn1s54" path="res://icon.svg" id="1_yhrgd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vu0ay"]
+size = Vector2(44, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ybn1"]
+size = Vector2(44, 44)
+
+[node name="arrow" type="CharacterBody2D"]
+script = ExtResource("1_jekui")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.34375, 0.34375)
+texture = ExtResource("1_yhrgd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vu0ay")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_1ybn1")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+rotation = -1.5708
+scale = Vector2(2, 2)
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

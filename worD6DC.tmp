@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfkrbxw86vdqm"]
+
+[ext_resource type="PackedScene" uid="uid://c3ilvygpys8nu" path="res://arrow.tscn" id="1_6ipmb"]
+[ext_resource type="PackedScene" uid="uid://cxdtwgxewwhja" path="res://goal.tscn" id="2_foe3b"]
+
+[node name="world" type="Node2D"]
+
+[node name="arrow" parent="." instance=ExtResource("1_6ipmb")]
+position = Vector2(109, 443)
+rotation = -1.5708
+
+[node name="goal" parent="." instance=ExtResource("2_foe3b")]
+position = Vector2(367, 443)
