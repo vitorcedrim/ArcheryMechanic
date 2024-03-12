@@ -29,5 +29,12 @@ shape = SubResource("RectangleShape2D_1ybn1")
 rotation = -1.5708
 scale = Vector2(2, 2)
 
+[node name="Midpoint" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+top_level = true
+z_index = 12
+scale = Vector2(0.078125, 0.078125)
+texture = ExtResource("1_yhrgd")
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

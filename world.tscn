@@ -11,3 +11,6 @@ rotation = -5.77399
 
 [node name="goal" parent="." instance=ExtResource("2_foe3b")]
 position = Vector2(367, 443)
+
+[node name="goal2" parent="." instance=ExtResource("2_foe3b")]
+position = Vector2(584, 485)
